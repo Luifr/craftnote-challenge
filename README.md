@@ -41,7 +41,8 @@ Requirements: node, npm
 ### How to run locally
 
 1. Send a get request in `localhost:3000/direction` with two url parameters `heading` and `target` both are rational numbers between 0 and 359
-1. Receive the response with an object giving the direction `{ direction: string }`
+1. Receive the response with an object giving the direction `{ direction: string }`, direction can be left, right or straight
+1. If there is any problem in the validation the response will be like this `{ error: string }`
 
 ### How to run with Docker
 

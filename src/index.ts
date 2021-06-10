@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import listEndpoints from 'express-list-endpoints';
 import { router } from './routes';
 
-const port = +(process.env?.['PORT'] || '3000');
+const port = +(process.env?.PORT || '3000');
 const app = express();
 
 app.use(express.json());

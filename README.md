@@ -17,3 +17,8 @@ Requirements: node, npm
 ## Formatter (prettier)
 
 1. To get the benefit of auto formatting in vscode install prettier globally `npm i -g prettier` and the [prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+## How to run with Docker
+
+1. docker build . -t <image-name>
+1. docker run -p <any-free-port>:3000 -d <image-name>

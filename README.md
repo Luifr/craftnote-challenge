@@ -2,31 +2,46 @@
 
 This project the craftnote technical challenge
 
-## Test (Jest)
+## Technical info
+
+### Api
+
+This rest api is provided by express and protected by [helmet](https://www.npmjs.com/package/helmet) and [cors](https://www.npmjs.com/package/cors)
+After the project starts, it lists all endpoints with [express-list-endpoints](https://www.npmjs.com/package/express-list-endpoints)
+
+### Pre commit hook (Husky)
+
+Before any commit husky runs tsc (transpiler), lint (Eslint) and tests (JEst)
+
+### Test (Jest)
 
 Run `npm run test`
 
-## Lint (Eslint)
+### Lint (Eslint)
 
 Run `npm run lint`
 
-## Formatter (prettier)
+### Formatter (prettier)
 
 1. To get the benefit of auto formatting in vscode install prettier globally `npm i -g prettier` and the [prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
-## How to setup locally
+## Setup & Running
+
+### How to setup locally
 
 Requirements: node, npm
 
 1. run `npm i`
 1. run `npm start` and the project if running in port 3000 (configurable in package.json)
 
-## How to run locally
+### How to run locally
 
 1. Send a get request in `localhost:3000/direction` with two url parameters `heading` and `target` both are rational numbers between 0 and 359
 1. Receive the response with an object giving the direction `{ direction: string }`
 
-## How to run with Docker
+### How to run with Docker
 
-1. docker build . -t <image-name>
-1. docker run -p <any-free-port>:3000 -d <image-name>
+Simply run `npm run docker:init` or the following steps
+
+1. `docker build . -t <image-name>`
+1. `docker run -p <any-free-port>:3000 -d <image-name>`

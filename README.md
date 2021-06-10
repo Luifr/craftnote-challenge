@@ -9,6 +9,10 @@ This project the craftnote technical challenge
 This rest api is provided by express and protected by [helmet](https://www.npmjs.com/package/helmet) and [cors](https://www.npmjs.com/package/cors)
 After the project starts, it lists all endpoints with [express-list-endpoints](https://www.npmjs.com/package/express-list-endpoints)
 
+### Development
+
+While developing run `npm run dev` instead of `npm run start`. In that way the project with restart whenever a .ts file changes because of [nodemon](https://www.npmjs.com/package/nodemon)
+
 ### Pre commit hook (Husky)
 
 Before any commit husky runs tsc (transpiler), lint (Eslint) and tests (JEst)

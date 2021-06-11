@@ -15,9 +15,9 @@ While developing run `npm run dev` instead of `npm run start`. In that way the p
 
 ### Pre commit hook (Husky)
 
-Before any commit husky runs tsc (transpiler), lint (Eslint) and tests (JEst)
+Before any commit husky runs tsc (transpiler), lint (Eslint) and tests (Jest)
 
-### Test (Jest)
+### Test (Jest & Supertest)
 
 Run `npm run test`
 

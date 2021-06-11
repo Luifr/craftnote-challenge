@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
 import { validateGetDirectionInput } from './directionValidator';
 
+export type Direction = 'straight' | 'left' | 'right';
+
 export const getDirection = (req: Request, res: Response): void => {
 	try {
 		validateGetDirectionInput(req.query as Record<string, string | string[]>);
@@ -12,5 +14,14 @@ export const getDirection = (req: Request, res: Response): void => {
 	const heading = +(req.query.heading as string);
 	const target = +(req.query.target as string);
 
-	res.status(201).json({ direction: `${heading} ${target}` });
+	let direction: Direction = 'straight';
+	const angleDiff = heading - target;
+
+	if (angleDiff >= 180 || (angleDiff > -180 && angleDiff < 0)) {
+		direction = 'right';
+	} else if (angleDiff <= -180 || (angleDiff > 0 && angleDiff < 180)) {
+		direction = 'left';
+	}
+
+	res.status(200).json({ direction });
 };

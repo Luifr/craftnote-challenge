@@ -9,6 +9,16 @@ This project the craftnote technical challenge
 This rest api is provided by [express](https://www.npmjs.com/package/express) and protected by [helmet](https://www.npmjs.com/package/helmet) and [cors](https://www.npmjs.com/package/cors).
 After the project starts, it lists all endpoints with [express-list-endpoints](https://www.npmjs.com/package/express-list-endpoints)
 
+### File structure (src)
+
+- routes (contain the api routes and resolvers)
+  - <service> (a folder for each business necessity, like direction)
+    - Routes
+    - Tests (the test file(s) is with each route so that it can test all kinds of validations by calling that rest endpoint)
+- <service> (a folder for each business necessity, like direction)
+  - Controllers (request resolvers)
+  - Validations
+
 ### Development
 
 While developing run `npm run dev` instead of `npm run start`. In that way the project with restart whenever a .ts file changes because of [nodemon](https://www.npmjs.com/package/nodemon)

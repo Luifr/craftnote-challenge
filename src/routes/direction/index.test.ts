@@ -1,8 +1,8 @@
 import express from 'express'; // import express
-
 import request from 'supertest';
-import { Direction } from '../direction/directionController';
-import { directionRouter } from './direction';
+import { Direction } from '../../direction/directionController';
+
+import { directionRouter } from '.';
 
 const app = express();
 app.use('/direction', directionRouter);
